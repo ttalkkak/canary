@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'GowunDodum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GowunBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumBarunpen';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343434;
+    color: white;
+    font-family: 'GowunDodum';
+    overflow: hidden;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 28px;
+    border: none;
+    outline: none;
+    background-color: #343434; /* 배경색상과 일치 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    color: white; /* 입력된 텍스트 색상 */
+    text-shadow: 0.05em 0.05em 0.1em rgba(0,0,0,1); /* 텍스트 그림자 */
+    font-family: 'GowunDodum'; /* 웹폰트 적용 */
+    width: 70%; /* 상대적인 너비 설정 */
+    max-width: 800px; /* 최대 너비 설정 */
+    caret-color: white; /* 커서 색상 변경 */
+    border-color: white;
+    ::placeholder {
+        color: #76767a; /* placeholder 색상 */
+    }
+}
+
+::selection {
+    background: #616266; /* 선택된 텍스트의 배경색 변경 */
+}
+
+/* Mozilla Firefox를 위한 추가 설정 */
+::-moz-selection {
+    background: #616266;
+}
+
+#logo {
+    position: fixed;
+    left: 15px;
+    margin-left: 10px;
+    top: 10px;
+    margin-top: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 32px;
+}
+#logo a, #logo a:visited, #logo a:active, #logo a:focus {
+    color: #ffe863;
+    text-decoration: none;
+}
+
+#fontSelector {
+    position: fixed;
+    right: 0;
+    margin-right: 10px;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+#version {
+    position: fixed;
+    left: 0;
+    margin-left: 10px;
+    bottom: 0;
+    margin-bottom: 5px;
+    color: #ffe863;
+}
