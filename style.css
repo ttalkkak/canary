@@ -1,39 +1,3 @@
-@font-face {
-    font-family: 'GowunDodum';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GowunBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'NanumBarunpen';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GangwonEdu';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-.courier-prime-regular {
-    font-family: "Courier Prime", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -47,63 +11,192 @@ body {
     overflow: hidden;
 }
 
-input[type="text"] {
-    padding: 10px; /* 입력창 내부 여백 */
-    font-size: 28px; /* 입력창 텍스트 크기 */
-    border: none; /* 테두리 제거 */
-    outline: none; /* 포커스 테두리 제거 */
-    background-color: #343434; /* 배경색상과 일치 */
-    text-align: center; /* 텍스트 가운데 정렬 */
-    color: white; /* 입력된 텍스트 색상 */
-    text-shadow: 0.05em 0.05em 0.1em rgba(0,0,0,1); /* 텍스트 그림자 */
-    font-family: 'GowunDodum'; /* 웹폰트 적용 */
-    width: 70%; /* 상대적인 너비 설정 */
-    max-width: 800px; /* 최대 너비 설정 */
-    caret-color: white; /* 커서 색상 변경 */
-    border-color: white; /* 입력창 테두리 색상 변경 */
+.hidden {
+    display: none;
 }
 
-input::placeholder {
-    color: #76767a; /* 플레이스홀더 텍스트 색상 변경 */
+.box {
+    border: solid 2px;
+    border-color: white;
+    border-radius: 8px;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 1);
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
+    margin: 4px;
+    font-size: 18px;
+    overflow: hidden;
 }
 
-input::selection {
-    background: #616266; /* 선택된 텍스트의 배경색 변경 */
+#box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-width: 750px;
+    max-width: 800px;
+    margin: 30px;
 }
 
-/* Mozilla Firefox를 위한 추가 설정 */
-input::-moz-selection {
-    background: #616266;
+#main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#over-box {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    width: 100%;
+    height: 100%;
 }
 
 #logo {
-    position: fixed;
-    left: 14px;
-    margin-left: 10px;
-    top: 10px;
-    margin-top: 10px;
-    font-family: 'Courier Prime', monospace;
-    font-size: 32px;
+    align-content: center;
 }
 
-#logo a, #logo a:visited, #logo a:active, #logo a:focus {
+#logo a,
+#logo a:visited,
+#logo a:active,
+#logo a:focus {
+    padding: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     color: #ffe863;
     text-decoration: none;
 }
 
-#fontSelector {
-    position: fixed;
-    right: 0;
-    margin-right: 10px;
-    bottom: 0;
-    margin-bottom: 10px;
+#version {
+    padding-left: 10px;
+    font-size: 16px;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
+    color: #ffe863;
+}
+
+#stats {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 4fr 5fr 4fr;
+    grid-gap: 20px;
+    padding: 10px;
+    padding-right: 18px;
+    text-align: right;
+}
+
+#option {
+    align-content: center;
+    margin-right: -2px;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#font {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#theme {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 #version {
-    position: fixed;
-    left: 0;
-    margin-left: 10px;
-    bottom: 0;
-    margin-bottom: 5px;
     color: #ffe863;
+}
+
+#phrase {
+    margin: 30px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    /* 문구 텍스트 크기 */
+    text-align: left;
+    /* 텍스트 가운데 정렬 */
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
+    /* 텍스트 그림자 */
+}
+
+#textInput {
+    margin: 30px;
+    margin-top: 10px;
+    /* 입력창 내부 여백 */
+    font-size: 24px;
+    /* 입력창 텍스트 크기 */
+    border: none;
+    /* 테두리 없음 */
+    outline: none;
+    /* 포커스시 테두리 없음 */
+    background-color: #454545;
+    /* 배경색상과 일치 */
+    text-align: left;
+    /* 텍스트 가운데 정렬 */
+    color: white;
+    /* 입력된 텍스트 색상 */
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
+    /* 텍스트 그림자 */
+    font-family: 'GowunDodum';
+    /* 웹폰트 적용 */
+    caret-color: white;
+    /* 커서 색상 변경 */
+}
+
+input::placeholder {
+    color: #76767a;
+    /* 플레이스홀더 텍스트 색상 변경 */
+}
+
+input::selection {
+    background: #616266;
+    /* 선택된 텍스트의 배경색 변경 */
+}
+
+input::-moz-selection {
+    background: #616266;
+}
+
+
+@font-face {
+    font-family: 'GowunDodum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GowunBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumBarunpen';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEdu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
 }

@@ -1,70 +1,123 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <title>ttalkkak Canary</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="manifest" href="./manifest.json">
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="./assets/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="./assets/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="./assets/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="./assets/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-        <meta charset="UTF-8">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
-        <meta name="theme-color" content="#343434">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="title" content="ttalkkak">
-        <meta name="description" content="Typing practice website">
-        <meta name="thubmnail" content="./assets/thumbnail.png">
-        <meta property="og:title" content="ttalkkak">
-        <meta property="og:description" content="Typing practice website">
-        <meta property="og:image" content="/assets/thumbnail.png">
-        <meta property="og:url" content="https://ttalkkak.github.io">
-        <meta property="og:site_name" content="ttalkkak">
-        <meta property="og:type" content="website">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:locale:alternate" content="ko_KR">
-        <meta property="twitter:card" content="summary">
-        <meta property="twitter:title" content="ttalkkak">
-        <meta property="twitter:description" content="Typing practice website">
-        <meta property="twitter:image" content="/assets/thumbnail.png">
-        <meta property="twitter:url" content="https://ttalkkak.github.io">
-        <meta property="twitter:site" content="@ttalkkak_">
-        <meta property="twitter:creator" content="@ttalkkak_">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        </style>
-    </head>
-    <body>
-        <div id="logo">
-            <a href="https://ttalkkak.github.io/canary/">
-                ttalkkak
-            </a>
+
+<head>
+    <title>ttalkkak Canary</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
+    <meta name="theme-color" content="#343434">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ttalkkak">
+    <meta name="description" content="Typing practice website">
+    <meta name="thubmnail" content="./assets/thumbnail.png">
+    <meta property="og:title" content="ttalkkak">
+    <meta property="og:description" content="Typing practice website">
+    <meta property="og:image" content="/assets/thumbnail.png">
+    <meta property="og:url" content="https://ttalkkak.github.io">
+    <meta property="og:site_name" content="ttalkkak">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="ttalkkak">
+    <meta property="twitter:description" content="Typing practice website">
+    <meta property="twitter:image" content="/assets/thumbnail.png">
+    <meta property="twitter:url" content="https://ttalkkak.github.io">
+    <meta property="twitter:site" content="@ttalkkak_">
+    <meta property="twitter:creator" content="@ttalkkak_">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="over-box">
+            <div id="logo">
+                <a href="/">
+                    ttalkkak
+                </a>
+                <div id="version">V. Canary</div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var logoLink = document.querySelector('#logo a');
+                        logoLink.addEventListener('click', function (e) {
+                            e.preventDefault(); // 기본 동작 방지
+                            window.history.pushState({}, '', logoLink.getAttribute('href'));
+                            // 필요한 경우 여기에서 브라우저 제목을 설정할 수 있습니다.
+                            // document.title = "새로운 제목";
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="stats" class="box">
+                <div>
+                    <div>Best CPM</div>
+                    <div id="best">0</div>
+                </div>
+                <div>
+                    <div>Current CPM</div>
+                    <div id="cpm">0</div>
+                </div>
+                <div>
+                    <div>Accuracy</div>
+                    <div>
+                        <span id="accuracy">100</span>
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="option" class="box">
+                <div id="font">
+                    <span>Font</span>
+                    <select id="fontSelector" onchange="changeFont()">
+                        <option value=" GowunDodum">고운돋움</option>
+                        <option value="GowunBatang">고운바탕</option>
+                        <option value="Pretendard">프리텐다드</option>
+                        <option value="NanumBarunpen">나눔바른펜</option>
+                        <option value="GangwonEdu">강원교육모두체</option>
+                    </select>
+                </div>
+                <div id="theme">
+                    <span>Theme</span>
+                    <select id="themeSelector" onchange="changeTheme()">
+                        <option value="">Dark</option>
+                        <option value="">Light</option>
+                        <option value="">System(Auto)</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
-        <input type="text" id="textInput" placeholder="다람쥐 헌 쳇바퀴에 타고파" spellcheck="false">
-
-        <div>
-            <select id="fontSelector" onchange="changeFont()"">
-                <option value="GowunDodum">고운돋움</option>
-                <option value="GowunBatang">고운바탕</option>
-                <option value="Pretendard">프리텐다드</option>
-                <option value="NanumBarunpen">나눔바른펜</option>
-                <option value="GangwonEdu">강원교육모두체</option>
-            </select>
+        <div id="main-box" class="box">
+            <div id="phrase">다람쥐 헌 쳇바퀴에 타고파</div>
+            <input type="text" id="textInput" placeholder="다람쥐 헌 쳇바퀴에 타고파" spellcheck="false" autocomplete="off"
+                autocapitalize="off">
         </div>
 
-        <footer id="version">
-            V. Canary
-        </footer>
-    </body>
+        <div id="under-box" class="box hidden"></div>
+    </div>
+
+    <script src="./scripts/font.js"></script>
+    <script src="./scripts/theme.js"></script>
+</body>
+
 </html>
