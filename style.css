@@ -157,6 +157,7 @@ input::selection {
 
 input::-moz-selection {
     background: #616266;
+    /* 선택된 텍스트의 배경색 변경 */
 }
 
 
