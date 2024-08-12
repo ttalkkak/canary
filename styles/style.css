@@ -241,6 +241,10 @@ body {
 }
 
 @media(max-width: 450px) {
+    #boxes {
+        width: 95%;
+    }
+
     #option {
         display: grid;
         grid-template-columns: 1fr;
