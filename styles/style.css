@@ -12,13 +12,14 @@ body {
 }
 
 .hidden {
+    align-items: center;
     display: none;
 }
 
 .box {
     border: solid 2px;
     border-color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 1);
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     margin: 4px;
@@ -26,7 +27,12 @@ body {
     overflow: hidden;
 }
 
-#box {
+.element {
+    height: 26px;
+    cursor: default;
+}
+
+#boxes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +41,23 @@ body {
     min-width: 750px;
     max-width: 800px;
     margin: 30px;
+}
+
+#header-box {
+    display: grid;
+    grid-template-columns: auto 3fr 2fr;
+    width: 100%;
+    height: 84px;
+    align-content: center;
+}
+
+#header-box .box {
+    align-content: center;
+    height: 52px;
+}
+
+#header-box div {
+    align-content: center;
 }
 
 #main-box {
@@ -48,43 +71,44 @@ body {
     height: 100%;
 }
 
-#over-box {
-    display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
+#footer-box {
+    display: flex;
+    align-content: center;
     width: 100%;
     height: 100%;
 }
 
 #logo {
+    all: unset;
     align-content: center;
-}
-
-#logo a,
-#logo a:visited,
-#logo a:active,
-#logo a:focus {
     padding: 10px;
     font-family: 'Courier Prime', monospace;
     font-size: 32px;
     text-align: center;
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
+}
+
+#logo a {
     color: #ffe863;
     text-decoration: none;
 }
 
 #version {
+    cursor: default;
     padding-left: 10px;
     font-size: 16px;
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     color: #ffe863;
+    height: 23px;
 }
 
 #stats {
     align-content: center;
     display: grid;
-    grid-template-columns: 4fr 5fr 4fr;
+    grid-template-columns: auto auto auto;
     grid-gap: 20px;
     padding: 10px;
+    padding-left: 18px;
     padding-right: 18px;
     text-align: right;
 }
@@ -93,7 +117,13 @@ body {
     align-content: center;
     margin-right: -2px;
     padding: 10px;
-    padding-left: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+select {
+    all: unset;
+    text-align: right;
 }
 
 #font {
@@ -106,11 +136,7 @@ body {
     grid-template-columns: 1fr 2fr;
 }
 
-#version {
-    color: #ffe863;
-}
-
-#phrase {
+.phrase {
     margin: 30px;
     margin-bottom: 10px;
     font-size: 24px;
@@ -119,9 +145,15 @@ body {
     /* 텍스트 가운데 정렬 */
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     /* 텍스트 그림자 */
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    height: 35px;
+    cursor: default;
 }
 
 #textInput {
+    all: unset;
     margin: 30px;
     margin-top: 10px;
     /* 입력창 내부 여백 */
@@ -143,9 +175,14 @@ body {
     /* 웹폰트 적용 */
     caret-color: white;
     /* 커서 색상 변경 */
+
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    height: 35px;
 }
 
-input::placeholder {
+#textInput::placeholder {
     color: #76767a;
     /* 플레이스홀더 텍스트 색상 변경 */
 }
@@ -160,6 +197,9 @@ input::-moz-selection {
     /* 선택된 텍스트의 배경색 변경 */
 }
 
+#footer-box div {
+    margin-top: 10px;
+}
 
 @font-face {
     font-family: 'GowunDodum';

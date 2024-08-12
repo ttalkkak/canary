@@ -47,38 +47,27 @@
 </head>
 
 <body>
-    <div id="box">
-        <div id="over-box">
-            <div id="logo">
-                <a href="/">
-                    ttalkkak
-                </a>
+    <div id="boxes">
+        <header id="header-box">
+            <div>
+                <h1 id="logo">
+                    <a href="/">ttalkkak</a>
+                </h1>
                 <div id="version">V. Canary</div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        var logoLink = document.querySelector('#logo a');
-                        logoLink.addEventListener('click', function (e) {
-                            e.preventDefault(); // 기본 동작 방지
-                            window.history.pushState({}, '', logoLink.getAttribute('href'));
-                            // 필요한 경우 여기에서 브라우저 제목을 설정할 수 있습니다.
-                            // document.title = "새로운 제목";
-                        });
-                    });
-                </script>
             </div>
 
             <div id="stats" class="box">
                 <div>
-                    <div>Best CPM</div>
-                    <div id="best">0</div>
+                    <div class="element">Best CPM</div>
+                    <div id="best" class="element">0</div>
                 </div>
                 <div>
-                    <div>Current CPM</div>
-                    <div id="cpm">0</div>
+                    <div class="element">Current CPM</div>
+                    <div id="cpm" class="element">0</div>
                 </div>
                 <div>
-                    <div>Accuracy</div>
-                    <div>
+                    <div class="element">Accuracy</div>
+                    <div class="element">
                         <span id="accuracy">100</span>
                         <span>%</span>
                     </div>
@@ -86,9 +75,9 @@
             </div>
 
             <div id="option" class="box">
-                <div id="font">
+                <div id="font" class="element">
                     <span>Font</span>
-                    <select id="fontSelector" onchange="changeFont()">
+                    <select id="fontSelector">
                         <option value=" GowunDodum">고운돋움</option>
                         <option value="GowunBatang">고운바탕</option>
                         <option value="Pretendard">프리텐다드</option>
@@ -96,28 +85,42 @@
                         <option value="GangwonEdu">강원교육모두체</option>
                     </select>
                 </div>
-                <div id="theme">
+                <div id="theme" class="element">
                     <span>Theme</span>
-                    <select id="themeSelector" onchange="changeTheme()">
+                    <select id="themeSelector">
                         <option value="">Dark</option>
                         <option value="">Light</option>
                         <option value="">System(Auto)</option>
                     </select>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <div id="main-box" class="box">
-            <div id="phrase">다람쥐 헌 쳇바퀴에 타고파</div>
+        <main id="main-box" class="box">
+            <div id="currentPhrase" class="phrase">다람쥐 헌 쳇바퀴에 타고파</div>
             <input type="text" id="textInput" placeholder="다람쥐 헌 쳇바퀴에 타고파" spellcheck="false" autocomplete="off"
                 autocapitalize="off">
-        </div>
+        </main>
 
-        <div id="under-box" class="box hidden"></div>
+        <footer id="footer-box" class="box hidden">
+            <div class="phrase">
+                <span class="hidden">Next:</span>
+                <span id="nextPhrase">추운 겨울에는 따뜻한 커피와 티를 마셔야지요</span>
+            </div>
+        </footer>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 페이지 로드 시 input 요소에 포커스 설정
+            const inputElement = document.getElementById('textInput');
+            if (inputElement) {
+                inputElement.focus();
+            }
+        });
+    </script>
     <script src="./scripts/font.js"></script>
     <script src="./scripts/theme.js"></script>
+    <script src="./scripts/stats.js"></script>
 </body>
 
 </html>
