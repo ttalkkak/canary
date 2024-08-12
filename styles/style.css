@@ -124,19 +124,15 @@ body {
 }
 
 #option {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
     align-content: center;
     justify-content: center;
     margin-right: -2px;
     padding: 10px;
     padding-left: 16px;
     padding-right: 16px;
-}
-
-#option div {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
 }
 
 #option select {
@@ -245,9 +241,10 @@ body {
 }
 
 @media(max-width: 450px) {
-    #option div {
+    #option {
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     #option span {
