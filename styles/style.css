@@ -22,7 +22,6 @@ body {
     box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 1);
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     margin: 4px;
-    font-size: 18px;
     overflow: hidden;
 }
 
@@ -46,6 +45,7 @@ body {
     grid-template-columns: auto 3fr 2fr;
     width: 100%;
     height: 84px;
+    font-size: 18px;
     align-content: center;
 }
 
@@ -133,6 +133,11 @@ body {
     padding: 10px;
     padding-left: 16px;
     padding-right: 16px;
+}
+
+#option span {
+    display: flex;
+    align-items: center;
 }
 
 #option select {
