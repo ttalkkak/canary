@@ -6,6 +6,8 @@ const textInput = document.getElementById('textInput');
 const savedFont = localStorage.getItem('Font');
 const savedTheme = localStorage.getItem('Theme');
 
+
+/*------Font------*/
 function changeFont() {
     const font = fontSelector.value;
     document.body.style.fontFamily = font;
@@ -13,14 +15,19 @@ function changeFont() {
     localStorage.setItem('Font', font);
 }
 
-function changeTheme() {
-    const theme = themeSelector.value;
-    localStorage.setItem('Theme', theme);
-}
-
 if (savedFont !== null) {
     fontSelector.value = savedFont;
     changeFont();
+}
+
+fontSelector.addEventListener('change', changeFont);
+
+
+/*------Theme------*/
+function changeTheme() {
+    const theme = themeSelector.value;
+    body.className = theme;
+    localStorage.setItem('Theme', theme);
 }
 
 if (savedTheme !== null) {
@@ -28,5 +35,4 @@ if (savedTheme !== null) {
     changeTheme();
 }
 
-fontSelector.addEventListener('change', changeFont);
 themeSelector.addEventListener('change', changeTheme);

@@ -6,9 +6,39 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #343434;
-    color: white;
+    color: #f3f5f7;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     font-family: 'GowunDodum';
     overflow: hidden;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Light Mode */
+.light {
+    background-color: #f3f5f7;
+    color: #343434;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.3);
+}
+
+.light .box {
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    border-color: #343434;
+}
+
+/* System(Auto) */
+@media (prefers-color-scheme: light) {
+    .system {
+        background-color: #f3f5f7;
+        color: #343434;
+        box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.3);
+    }
+
+    .system .box {
+        box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        border-color: #343434;
+    }
 }
 
 .hidden {
@@ -17,10 +47,9 @@ body {
 
 .box {
     border: solid 2px;
-    border-color: white;
+    border-color: #f3f5f7;
     border-radius: 10px;
     box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 1);
-    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     margin: 4px;
     overflow: hidden;
 }
@@ -83,6 +112,7 @@ body {
     align-content: center;
     justify-content: center;
     text-align: left;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
 }
 
 #logo {
@@ -90,10 +120,10 @@ body {
     align-content: center;
     padding: 10px;
     padding-bottom: 0px;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     font-family: 'Courier Prime', monospace;
     font-size: 32px;
     text-align: center;
-    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
 }
 
 #logo a {
@@ -107,7 +137,6 @@ body {
     padding: 10px;
     padding-top: 0px;
     font-size: 16px;
-    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     color: #ffe863;
     height: 23px;
 }
@@ -156,8 +185,6 @@ body {
     /* 문구 텍스트 크기 */
     text-align: left;
     /* 텍스트 가운데 정렬 */
-    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
-    /* 텍스트 그림자 */
     display: flex;
     align-items: center;
     padding: 0px;
@@ -180,13 +207,13 @@ body {
     /* 배경색상과 일치 */
     text-align: left;
     /* 텍스트 가운데 정렬 */
-    color: white;
+    color: #f3f5f7;
     /* 입력된 텍스트 색상 */
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     /* 텍스트 그림자 */
     font-family: 'GowunDodum';
     /* 웹폰트 적용 */
-    caret-color: white;
+    caret-color: #f3f5f7;
     /* 커서 색상 변경 */
     display: flex;
     align-items: center;
@@ -213,6 +240,7 @@ body {
     margin-top: 10px;
 }
 
+/* Narrow UI */
 @media(max-width: 800px) {
     .cpm {
         display: none;
@@ -245,6 +273,7 @@ body {
     }
 }
 
+/* Mobile UI */
 @media(max-width: 450px) {
     #boxes {
         width: 95%;
