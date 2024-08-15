@@ -268,7 +268,7 @@ body {
 /* Mobile UI */
 @media(max-width: 450px) {
     #boxes {
-        width: 95%;
+        width: 90%;
     }
 
     #option {
