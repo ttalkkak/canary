@@ -26,6 +26,14 @@ body {
     border-color: #343434;
 }
 
+.light #logo a {
+    color: #ffd900;
+}
+
+.light #version {
+    color: #ffd900;
+}
+
 /* System(Auto) */
 @media (prefers-color-scheme: light) {
     .system {
@@ -79,7 +87,6 @@ body {
 }
 
 #header-box .box {
-    align-content: center;
     height: 52px;
 }
 
@@ -90,7 +97,6 @@ body {
 #main-box {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     margin-left: 0px;
     margin-right: 0px;
@@ -167,13 +173,15 @@ body {
 #option span {
     display: flex;
     align-items: center;
+    justify-content: left;
+    text-align: right;
 }
 
 #option select {
     all: unset;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     text-align: right;
     cursor: pointer;
 }
@@ -182,11 +190,10 @@ body {
     margin: 30px;
     margin-bottom: 10px;
     font-size: 24px;
-    /* 문구 텍스트 크기 */
     text-align: left;
-    /* 텍스트 가운데 정렬 */
     display: flex;
     align-items: center;
+    justify-content: left;
     padding: 0px;
     height: 35px;
     cursor: default;
@@ -196,44 +203,29 @@ body {
     all: unset;
     margin: 30px;
     margin-top: 10px;
-    /* 입력창 내부 여백 */
     font-size: 24px;
-    /* 입력창 텍스트 크기 */
     border: none;
-    /* 테두리 없음 */
     outline: none;
-    /* 포커스시 테두리 없음 */
     background-color: #454545;
-    /* 배경색상과 일치 */
-    text-align: left;
-    /* 텍스트 가운데 정렬 */
     color: #f3f5f7;
-    /* 입력된 텍스트 색상 */
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
-    /* 텍스트 그림자 */
+    text-align: left;
     font-family: 'GowunDodum';
-    /* 웹폰트 적용 */
     caret-color: #f3f5f7;
-    /* 커서 색상 변경 */
     display: flex;
     align-items: center;
+    justify-content: left;
     padding: 0px;
     height: 35px;
 }
 
 #textInput::placeholder {
     color: #76767a;
-    /* 플레이스홀더 텍스트 색상 변경 */
 }
 
-#textInput::selection {
-    background: #616266;
-    /* 선택된 텍스트의 배경색 변경 */
-}
-
+#textInput::selection,
 #textInput::-moz-selection {
     background: #616266;
-    /* 선택된 텍스트의 배경색 변경 */
 }
 
 #footer-box div {
