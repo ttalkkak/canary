@@ -41,7 +41,11 @@ function changeTabColor() {
     } else if (theme === 'light') {
         tabColor.setAttribute('content', '#f3f5f7');
     } else if (theme === 'system') {
-        tabColor.setAttribute('content', 'auto');
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            tabColor.setAttribute('content', '#f3f5f7');
+        } else {
+            tabColor.setAttribute('content', '#343434');
+        }
     }
 }
 
@@ -51,3 +55,4 @@ if (savedTheme !== null) {
 }
 
 themeSelector.addEventListener('change', changeTheme);
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', changeTabColor); // System light/dark mode change listener
