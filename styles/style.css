@@ -18,7 +18,7 @@ body {
     background-color: #f3f3f3;
     color: #343434;
     box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.3);
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
 }
 
 .light .box {
@@ -40,12 +40,20 @@ body {
         background-color: #f3f3f3;
         color: #343434;
         box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-        text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.3);
+        text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
     }
 
     .system .box {
         box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
         border-color: #343434;
+    }
+
+    .system #logo a {
+        color: #ffd900;
+    }
+
+    .system #version {
+        color: #ffd900;
     }
 }
 
@@ -133,7 +141,7 @@ body {
 }
 
 #logo a {
-    color: #ffe863;
+    color: #ffd900;
     text-decoration: none;
     text-align: center;
 }
@@ -143,7 +151,7 @@ body {
     padding: 10px;
     padding-top: 0px;
     font-size: 16px;
-    color: #ffe863;
+    color: #ffd900;
     height: 23px;
 }
 

@@ -54,6 +54,15 @@
                     <a href="/">ttalkkak</a>
                 </h1>
                 <div id="version">V. Canary</div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var logoLink = document.querySelector('#logo a');
+                        logoLink.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            window.history.pushState({}, '', logoLink.getAttribute('href'));
+                        });
+                    });
+                </script>
             </div>
 
             <div id="stats" class="box">
