@@ -231,8 +231,11 @@ body {
     color: #76767a;
 }
 
-#textInput::selection,
-#textInput::-moz-selection {
+#textInput::selection {
+    background: #616266;
+}
+
+::selection {
     background: #616266;
 }
 
