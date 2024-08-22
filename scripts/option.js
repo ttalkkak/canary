@@ -2,6 +2,7 @@ const fontSelector = document.getElementById('fontSelector');
 const themeSelector = document.getElementById('themeSelector');
 const tabColor = document.getElementById('theme-color');
 const body = document.querySelector('body');
+const boxes = document.querySelector('#boxes');
 const textInput = document.getElementById('textInput');
 
 const savedFont = localStorage.getItem('Font');
@@ -14,6 +15,12 @@ function changeFont() {
     document.body.style.fontFamily = font;
     textInput.style.fontFamily = font;
     localStorage.setItem('Font', font);
+
+    if (font === 'GalmuriMono11') {
+        boxes.className = 'galmuri';
+    } else {
+        boxes.className = '';
+    }
 }
 
 if (savedFont !== null) {
