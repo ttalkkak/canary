@@ -13,50 +13,6 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
-/* Light Mode */
-.light {
-    background-color: #f3f3f3;
-    color: #343434;
-    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
-}
-
-.light .box {
-    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-    border-color: #343434;
-}
-
-.light #logo a {
-    color: #ffd900;
-}
-
-.light #version {
-    color: #ffd900;
-}
-
-/* System(Auto) */
-@media (prefers-color-scheme: light) {
-    .system {
-        background-color: #f3f3f3;
-        color: #343434;
-        box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-        text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
-    }
-
-    .system .box {
-        box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-        border-color: #343434;
-    }
-
-    .system #logo a {
-        color: #ffd900;
-    }
-
-    .system #version {
-        color: #ffd900;
-    }
-}
-
 .hidden {
     display: none;
 }
@@ -299,16 +255,129 @@ body {
     }
 }
 
-/*Box Style for Galmuri*/
-.galmuri .box {
+
+/* Light Mode */
+.light {
+    background-color: #f3f3f3;
+    color: #343434;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
+}
+
+.light .box {
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    border-color: #343434;
+}
+
+.light #logo a {
+    color: #ffd900;
+}
+
+.light #version {
+    color: #ffd900;
+}
+
+/* Terminal Theme */
+.terminal {
+    background-color: #000000;
+    color: #00f900;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.terminal .box {
+    box-shadow: none;
+    border-color: #00f900;
+}
+
+.terminal #logo a {
+    color: #00f900;
+}
+
+.terminal #version {
+    color: #00f900;
+}
+
+.terminal #textInput {
+    background-color: #000000;
+    color: #00f900;
+    border-bottom: 2px solid #00f900;
+    margin-bottom: 28px;
+    text-shadow: none;
+}
+
+.terminal ::selection {
+    background: #00f900;
+    color: #000000
+}
+
+/* Online Theme */
+.online {
+    background-color: #00007d;
+    color: #ffffff;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.online .box {
+    box-shadow: none;
+    border-color: #ffffff;
+}
+
+.online #logo a {
+    color: #ffffff;
+}
+
+.online #version {
+    color: #ffffff;
+}
+
+.online #textInput {
+    background-color: #00007d;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 28px;
+    text-shadow: none;
+}
+
+.online ::selection {
+    background: #ffffff;
+    color: #00007d
+}
+
+/* System(Auto) */
+@media (prefers-color-scheme: light) {
+    .system {
+        background-color: #f3f3f3;
+        color: #343434;
+        box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
+    }
+
+    .system .box {
+        box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        border-color: #343434;
+    }
+
+    .system #logo a {
+        color: #ffd900;
+    }
+
+    .system #version {
+        color: #ffd900;
+    }
+}
+
+/*Box Style for Pixelfont*/
+.pixel .box {
     border-radius: 0px;
 }
 
-.galmuri #logo {
+.pixel #logo {
     font-family: 'GalmuriMono7';
 }
 
-.galmuri #version {
+.pixel #version {
     font-family: 'Galmuri7';
 }
 
@@ -331,6 +400,20 @@ body {
 @font-face {
     font-family: 'Pretendard';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

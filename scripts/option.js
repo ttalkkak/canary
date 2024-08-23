@@ -1,9 +1,7 @@
 const fontSelector = document.getElementById('fontSelector');
 const themeSelector = document.getElementById('themeSelector');
 const tabColor = document.getElementById('theme-color');
-const body = document.querySelector('body');
 const boxes = document.querySelector('#boxes');
-const textInput = document.getElementById('textInput');
 
 const savedFont = localStorage.getItem('Font');
 const savedTheme = localStorage.getItem('Theme');
@@ -13,11 +11,11 @@ const savedTheme = localStorage.getItem('Theme');
 function changeFont() {
     const font = fontSelector.value;
     document.body.style.fontFamily = font;
-    textInput.style.fontFamily = font;
+    document.querySelector('#textInput').style.fontFamily = font;
     localStorage.setItem('Font', font);
 
-    if (font === 'GalmuriMono11') {
-        boxes.className = 'galmuri';
+    if (font === 'GalmuriMono11' || font === 'NeoDunggeunmo') {
+        boxes.className = 'pixel';
     } else {
         boxes.className = '';
     }
@@ -34,7 +32,7 @@ fontSelector.addEventListener('change', changeFont);
 /*------Theme------*/
 function changeTheme() {
     const theme = themeSelector.value;
-    body.className = theme;
+    document.body.className = theme;
     changeTabColor();
     localStorage.setItem('Theme', theme);
 }
