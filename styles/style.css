@@ -10,7 +10,7 @@ body {
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     font-family: 'GowunDodum';
     overflow: hidden;
-    transition: background-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, border-color 0.5s, text-color 0.5s;
 }
 
 #preloader {
@@ -190,6 +190,7 @@ body {
     justify-content: left;
     padding: 0px;
     height: 35px;
+    transition: background-color 0.5s, text-color 0.5s;
 }
 
 #textInput::placeholder {
