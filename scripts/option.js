@@ -51,6 +51,11 @@ function changeTabColor() {
         } else {
             tabColor.setAttribute('content', '#343434');
         }
+    } else if (theme === 'Terminal') {
+        tabColor.setAttribute('content', '#000000');
+    }
+    else if (theme == 'Telnet') {
+        tabColor.setAttribute('content', '#00007d');
     }
 }
 
