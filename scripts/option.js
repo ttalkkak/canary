@@ -11,7 +11,7 @@ const savedTheme = localStorage.getItem('Theme');
 function changeFont() {
     const font = fontSelector.value;
     document.body.style.fontFamily = font;
-    document.querySelector('#textInput').style.fontFamily = font;
+    document.querySelector('.textInput').style.fontFamily = font;
     localStorage.setItem('Font', font);
 
     if (font === 'GalmuriMono11' || font === 'NeoDunggeunmo') {

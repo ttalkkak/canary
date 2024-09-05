@@ -75,6 +75,18 @@ body {
     height: 100%;
 }
 
+#current-box {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#next-box {
+    margin: 0px 20px 0px 20px;
+}
+
 #footer-box {
     display: flex;
     flex-direction: column;
@@ -158,8 +170,7 @@ body {
 }
 
 .phrase {
-    margin: 30px;
-    margin-bottom: 10px;
+    margin: 10px;
     font-size: 24px;
     text-align: left;
     display: flex;
@@ -170,13 +181,12 @@ body {
     cursor: default;
 }
 
-#textInput {
+.textInput {
     all: unset;
     border: none;
     border-bottom: 2px solid #f3f3f3;
-    margin: 30px;
-    margin-top: 10px;
-    margin-bottom: 28px;
+    margin: 10px;
+    margin-bottom: 8px;
     outline: none;
     font-size: 24px;
     background-color: #454545;
@@ -193,20 +203,16 @@ body {
     transition: background-color 0.5s, text-color 0.5s;
 }
 
-#textInput::placeholder {
+.textInput::placeholder {
     color: #76767a;
 }
 
-#textInput::selection {
+.textInput::selection {
     background: #616266;
 }
 
 ::selection {
     background: #616266;
-}
-
-#footer-box div {
-    margin-top: 10px;
 }
 
 /* Narrow UI */
@@ -308,15 +314,14 @@ body {
     color: #00f900;
 }
 
-.terminal #textInput {
+.terminal .textInput {
     background-color: #000000;
     color: #00f900;
     border-bottom: 2px solid #00f900;
-    margin-bottom: 28px;
     text-shadow: none;
 }
 
-.terminal #textInput::selection {
+.terminal .textInput::selection {
     background: #00f900;
     color: #000000
 }
@@ -347,15 +352,14 @@ body {
     color: #ffffff;
 }
 
-.telnet #textInput {
+.telnet .textInput {
     background-color: #00007d;
     color: #ffffff;
     border-bottom: 2px solid #ffffff;
-    margin-bottom: 28px;
     text-shadow: none;
 }
 
-.telnet #textInput::selection {
+.telnet .textInput::selection {
     background: #ffffff;
     color: #00007d
 }
