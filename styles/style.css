@@ -121,7 +121,7 @@ body {
     text-align: center;
 }
 
-#version {
+#date {
     cursor: default;
     padding: 10px;
     padding-top: 0px;
@@ -191,6 +191,7 @@ body {
     font-size: 24px;
     background-color: #454545;
     color: #f3f3f3;
+    caret-color: #f3f3f3;
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
     text-align: left;
     font-family: 'GowunDodum';
@@ -289,8 +290,26 @@ body {
     color: #ffd900;
 }
 
-.light #version {
+.light #date {
     color: #ffd900;
+}
+
+.light .textInput {
+    background-color: #f3f3f3;
+    color: #343434;
+    caret-color: #343434;
+    border-bottom: 2px solid #343434;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
+}
+
+.light .textInput::selection {
+    background: #76767a;
+    color: #f3f3f3
+}
+
+.light ::selection {
+    background: #76767a;
+    color: #f3f3f3
 }
 
 /* Terminal Theme */
@@ -310,13 +329,14 @@ body {
     color: #00f900;
 }
 
-.terminal #version {
+.terminal #date {
     color: #00f900;
 }
 
 .terminal .textInput {
     background-color: #000000;
     color: #00f900;
+    caret-color: #00f900;
     border-bottom: 2px solid #00f900;
     text-shadow: none;
 }
@@ -348,13 +368,14 @@ body {
     color: #ffffff;
 }
 
-.telnet #version {
+.telnet #date {
     color: #ffffff;
 }
 
 .telnet .textInput {
     background-color: #00007d;
     color: #ffffff;
+    caret-color: #ffffff;
     border-bottom: 2px solid #ffffff;
     text-shadow: none;
 }
@@ -387,8 +408,26 @@ body {
         color: #ffd900;
     }
 
-    .system #version {
+    .system #date {
         color: #ffd900;
+    }
+
+    .system .textInput {
+        background-color: #f3f3f3;
+        color: #343434;
+        caret-color: #343434;
+        border-bottom: 2px solid #343434;
+        text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.2);
+    }
+
+    .system .textInput::selection {
+        background: #76767a;
+        color: #f3f3f3
+    }
+
+    .system ::selection {
+        background: #76767a;
+        color: #f3f3f3
     }
 }
 
@@ -401,7 +440,7 @@ body {
     font-family: 'GalmuriMono7';
 }
 
-.pixel #version {
+.pixel #date {
     font-family: 'Galmuri7';
 }
 
