@@ -27,7 +27,7 @@ textInput.addEventListener('input', function () {
                 }
             }
             // 현재 입력 중인 글자 제외
-            if (i < textInput.selectionStart) {
+            if (i < inputParsed.length - 1) {
                 // 받침이 추가로 입력되었을 때
                 if (inputParsed[i].length > currentPhraseParsed[i].length) {
                     length += inputParsed[i].length - currentPhraseParsed[i].length;
