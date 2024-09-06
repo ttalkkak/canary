@@ -38,6 +38,13 @@ function firstPhrase() {
         currentPhrase.innerHTML = data.quotes[currentIndex];
         currentPhraseParsed = parseText(currentPhrase.innerHTML);
         nextPhrase.innerHTML = data.quotes[nextIndex];
+
+        current.innerHTML = 0;
+        accuracy.innerHTML = '100';
+
+        textInput.value = '';
+        inputParsed = parseText(textInput.value);
+        textInput.setSelectionRange(0, 0);
         textInput.focus();
     });
 }

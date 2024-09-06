@@ -38,9 +38,11 @@ textInput.addEventListener('input', function () {
                 }
             }
         }
-        if (inputParsed.length > currentPhraseParsed.length) {
-            length += inputParsed[i].length;
-        } // overflow
+        else {
+            if (inputParsed.length > currentPhraseParsed.length) {
+                length += inputParsed[i].length;
+            } // overflow
+        }
     }
     console.log(correct, length);
     if (textInput.value.length === 0) {
@@ -58,13 +60,16 @@ textInput.addEventListener('keydown', function (e) {
     }
 });
 
-textInput.addEventListener('keypress', function (e) {
-    if (currentPhraseParsed && inputParsed && inputParsed.length >= currentPhraseParsed.length) {
-        e.preventDefault();
-        changePhrase();
+textInput.addEventListener('keyup', function (e) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        if (currentPhraseParsed && inputParsed && inputParsed.length >= currentPhraseParsed.length) {
+            e.preventDefault();
+            changePhrase();
+        }
     }
 });
 
+// Disable paste
 textInput.addEventListener('paste', function (e) {
     e.preventDefault();
 });
