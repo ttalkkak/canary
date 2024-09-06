@@ -19,6 +19,8 @@ function changeFont() {
     } else {
         boxes.className = '';
     }
+
+    document.querySelector('.textInput').focus();
 }
 
 if (savedFont !== null) {
@@ -35,6 +37,8 @@ function changeTheme() {
     document.body.className = theme;
     changeTabColor();
     localStorage.setItem('Theme', theme);
+
+    document.querySelector('.textInput').focus();
 }
 
 function changeTabColor() {

@@ -19,24 +19,30 @@ textInput.addEventListener('input', function () {
     let correct = 0;
     let length = 0;
     for (let i = 0; i < inputParsed.length; i++) {
-        for (let j = 0; j < inputParsed[i].length && j < currentPhraseParsed[i].length; j++) {
-            length++;
-            if (currentPhraseParsed[i] && inputParsed[i][j] === currentPhraseParsed[i][j]) {
-                correct++;
+        if (currentPhraseParsed && currentPhraseParsed[i]) {
+            for (let j = 0; j < inputParsed[i].length && j < currentPhraseParsed[i].length; j++) {
+                length++;
+                if (currentPhraseParsed[i] && inputParsed[i][j] === currentPhraseParsed[i][j]) {
+                    correct++;
+                }
+            }
+            // 현재 입력 중인 글자 제외
+            if (i < textInput.selectionStart) {
+                // 받침이 추가로 입력되었을 때
+                if (inputParsed[i].length > currentPhraseParsed[i].length) {
+                    length += inputParsed[i].length - currentPhraseParsed[i].length;
+                }
+                // 받침이 빠졌을 때
+                if (inputParsed[i].length < currentPhraseParsed[i].length) {
+                    length += currentPhraseParsed[i].length - inputParsed[i].length;
+                }
             }
         }
-        // 현재 입력 중인 글자 제외
-        if (i < textInput.selectionStart) {
-            // 받침이 추가로 입력되었을 때
-            if (inputParsed[i].length > currentPhraseParsed[i].length) {
-                length += inputParsed[i].length - currentPhraseParsed[i].length;
-            }
-            // 받침이 빠졌을 때
-            if (inputParsed[i].length < currentPhraseParsed[i].length) {
-                length += currentPhraseParsed[i].length - inputParsed[i].length;
-            }
-        }
+        if (inputParsed.length > currentPhraseParsed.length) {
+            length += inputParsed[i].length;
+        } // overflow
     }
+    console.log(correct, length);
     if (textInput.value.length === 0) {
         accuracy.innerHTML = '100';
     }
@@ -46,7 +52,7 @@ textInput.addEventListener('input', function () {
 });
 
 textInput.addEventListener('keydown', function (e) {
-    if (e.key === 'pageDown') {
+    if (e.key === 'PageDown') {
         e.preventDefault();
         changePhrase();
     }
