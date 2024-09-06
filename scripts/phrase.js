@@ -28,16 +28,20 @@ function changePhrase() {
 }
 
 /* first fetch */
-fetch(jsonPath).then(response => response.json()).then(data => {
-    currentIndex = Math.floor(Math.random() * data.quotes.length);
-    nextIndex = Math.floor(Math.random() * (data.quotes.length - 1));
-    if (nextIndex >= currentIndex) {
-        nextIndex++;
-    }
-    currentPhrase.innerHTML = data.quotes[currentIndex];
-    currentPhraseParsed = parseText(currentPhrase.innerHTML);
-    nextPhrase.innerHTML = data.quotes[nextIndex];
-    textInput.focus();
-});
+function firstPhrase() {
+    fetch(jsonPath).then(response => response.json()).then(data => {
+        currentIndex = Math.floor(Math.random() * data.quotes.length);
+        nextIndex = Math.floor(Math.random() * (data.quotes.length - 1));
+        if (nextIndex >= currentIndex) {
+            nextIndex++;
+        }
+        currentPhrase.innerHTML = data.quotes[currentIndex];
+        currentPhraseParsed = parseText(currentPhrase.innerHTML);
+        nextPhrase.innerHTML = data.quotes[nextIndex];
+        textInput.focus();
+    });
+}
+
+firstPhrase();
 
 //document.querySelector('.textInput').addEventListener('click', changePhrase());

@@ -25,6 +25,17 @@ textInput.addEventListener('input', function () {
                 correct++;
             }
         }
+        // 현재 입력 중인 글자 제외
+        if (i < textInput.selectionStart) {
+            // 받침이 추가로 입력되었을 때
+            if (inputParsed[i].length > currentPhraseParsed[i].length) {
+                length += inputParsed[i].length - currentPhraseParsed[i].length;
+            }
+            // 받침이 빠졌을 때
+            if (inputParsed[i].length < currentPhraseParsed[i].length) {
+                length += currentPhraseParsed[i].length - inputParsed[i].length;
+            }
+        }
     }
     if (textInput.value.length === 0) {
         accuracy.innerHTML = '100';

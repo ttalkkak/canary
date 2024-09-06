@@ -60,6 +60,7 @@
                         var logoLink = document.querySelector('#logo a');
                         logoLink.addEventListener('click', function (e) {
                             e.preventDefault();
+                            firstPhrase();
                             window.history.pushState({}, '', logoLink.getAttribute('href'));
                         });
                     });
