@@ -58,6 +58,9 @@ textInput.addEventListener('keydown', function (e) {
         e.preventDefault();
         changePhrase();
     }
+    if ((e.key === ' ' || e.key === 'Spacebar') && inputParsed.length >= currentPhraseParsed.length) {
+        e.preventDefault();
+    } // 마지막 글자 입력 후 스페이스바 입력 방지
 });
 
 textInput.addEventListener('keyup', function (e) {

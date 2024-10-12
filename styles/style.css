@@ -179,6 +179,9 @@ body {
     padding: 0px;
     height: 35px;
     cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    width: auto;
 }
 
 .textInput {

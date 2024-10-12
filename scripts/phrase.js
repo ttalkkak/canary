@@ -25,6 +25,17 @@ function changePhrase() {
     inputParsed = parseText(textInput.value);
     textInput.setSelectionRange(0, 0);
     textInput.focus();
+
+    if (isOverflowing(currentPhrase)) {
+        let overflowWidth = currentPhrase.scrollWidth + 60;
+        boxes.style = `width: ${overflowWidth}px; max-width: 100%;`;
+    } else {
+        boxes.style = '';
+    }
+}
+
+function isOverflowing(element) {
+    return element.scrollWidth > element.clientWidth;
 }
 
 /* first fetch */
@@ -46,6 +57,13 @@ function firstPhrase() {
         inputParsed = parseText(textInput.value);
         textInput.setSelectionRange(0, 0);
         textInput.focus();
+
+        if (isOverflowing(currentPhrase)) {
+            let overflowWidth = currentPhrase.scrollWidth + 60;
+            boxes.style = `width: ${overflowWidth}px; max-width: 100%;`;
+        } else {
+            boxes.style = '';
+        }
     });
 }
 
