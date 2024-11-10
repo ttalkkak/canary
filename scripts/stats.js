@@ -51,6 +51,10 @@ textInput.addEventListener('input', function () {
     else {
         accuracy.innerHTML = Math.floor(((correct / length)) * 100);
     }
+
+    if (inputParsed.length >= currentPhraseParsed.length) {
+        textInput.setSelectionRange(currentPhrase.innerHTML.length, currentPhrase.innerHTML.length);
+    }
 });
 
 textInput.addEventListener('keydown', function (e) {
