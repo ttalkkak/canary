@@ -174,6 +174,54 @@ option {
     background-color: #76767a;
 }
 
+#fontSelector option:nth-child(1) {
+    font-family: 'GowunDodum';
+}
+
+#fontSelector option:nth-child(2) {
+    font-family: 'GowunBatang';
+}
+
+#fontSelector option:nth-child(3) {
+    font-family: 'Pretendard';
+}
+
+#fontSelector option:nth-child(4) {
+    font-family: 'NanumBarunpen';
+}
+
+#fontSelector option:nth-child(5) {
+    font-family: 'D2Coding';
+}
+
+#fontSelector option:nth-child(6) {
+    font-family: 'GalmuriMono11';
+}
+
+#fontSelector option:nth-child(7) {
+    font-family: 'NeoDunggeunmo';
+}
+
+#themeSelector option:nth-child(1) {
+    color: #f3f3f3;
+    background-color: #76767a;
+}
+
+#themeSelector option:nth-child(2) {
+    color: #343434;
+    background-color: #f3f3f3;
+}
+
+#themeSelector option:nth-child(4) {
+    color: #00f900;
+    background-color: #000000;
+}
+
+#themeSelector option:nth-child(5) {
+    color: #ffffff;
+    background-color: #00007d;
+}
+
 .phrase {
     margin: 10px;
     font-size: 24px;
@@ -390,7 +438,7 @@ option {
     color: #ffffff;
 }
 
-.terminal option {
+.telnet option {
     color: #ffffff;
     background-color: #00007d;
 }
