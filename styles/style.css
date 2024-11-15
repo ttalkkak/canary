@@ -36,6 +36,7 @@ body {
 .element {
     height: 26px;
     cursor: default;
+    line-height: 26px;
 }
 
 #boxes {
