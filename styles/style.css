@@ -110,7 +110,7 @@ body {
     padding: 10px;
     padding-bottom: 0px;
     text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 1);
-    font-family: 'Courier Prime', monospace;
+    font-family: 'Courier Prime', 'Courier', monospace;
     font-size: 32px;
     text-align: center;
 }
@@ -167,6 +167,11 @@ body {
     justify-content: right;
     text-align: right;
     cursor: pointer;
+}
+
+option {
+    color: #f3f3f3;
+    background-color: #76767a;
 }
 
 .phrase {
@@ -297,6 +302,11 @@ body {
     color: #ffd900;
 }
 
+.light option {
+    color: #343434;
+    background-color: #f3f3f3;
+}
+
 .light .textInput {
     background-color: #f3f3f3;
     color: #343434;
@@ -334,6 +344,11 @@ body {
 
 .terminal #date {
     color: #00f900;
+}
+
+.terminal option {
+    color: #00f900;
+    background-color: #000000;
 }
 
 .terminal .textInput {
@@ -375,6 +390,11 @@ body {
     color: #ffffff;
 }
 
+.terminal option {
+    color: #ffffff;
+    background-color: #00007d;
+}
+
 .telnet .textInput {
     background-color: #00007d;
     color: #ffffff;
@@ -413,6 +433,11 @@ body {
 
     .system #date {
         color: #ffd900;
+    }
+
+    .system option {
+        color: #343434;
+        background-color: #f3f3f3;
     }
 
     .system .textInput {
