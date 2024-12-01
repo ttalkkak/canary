@@ -374,22 +374,22 @@ option {
 
 .light .textInput::selection {
     background: #76767a;
-    color: #f3f3f3
+    color: #f3f3f3;
 }
 
 .light .textInput::-moz-selection {
     background: #76767a;
-    color: #f3f3f3
+    color: #f3f3f3;
 }
 
 .light ::selection {
     background: #76767a;
-    color: #f3f3f3
+    color: #f3f3f3;
 }
 
 .light ::-moz-selection {
     background: #76767a;
-    color: #f3f3f3
+    color: #f3f3f3;
 }
 
 /* Terminal Theme */
@@ -428,22 +428,22 @@ option {
 
 .terminal .textInput::selection {
     background: #00f900;
-    color: #000000
+    color: #000000;
 }
 
 .terminal .textInput::-moz-selection {
     background: #00f900;
-    color: #000000
+    color: #000000;
 }
 
 .terminal ::selection {
     background: #00f900;
-    color: #000000
+    color: #000000;
 }
 
 .terminal ::-moz-selection {
     background: #00f900;
-    color: #000000
+    color: #000000;
 }
 
 /* Telnet Theme */
@@ -482,22 +482,22 @@ option {
 
 .telnet .textInput::selection {
     background: #ffffff;
-    color: #00007d
+    color: #00007d;
 }
 
 .telnet .textInput::-moz-selection {
     background: #ffffff;
-    color: #00007d
+    color: #00007d;
 }
 
 .telnet ::selection {
     background: #ffffff;
-    color: #00007d
+    color: #00007d;
 }
 
 .telnet ::-moz-selection {
     background: #ffffff;
-    color: #00007d
+    color: #00007d;
 }
 
 /* System(Auto) */
@@ -537,83 +537,84 @@ option {
 
     .system .textInput::selection {
         background: #76767a;
-        color: #f3f3f3
+        color: #f3f3f3;
     }
 
     .system .textInput::-moz-selection {
         background: #76767a;
-        color: #f3f3f3
+        color: #f3f3f3;
     }
 
     .system ::selection {
         background: #76767a;
-        color: #f3f3f3
+        color: #f3f3f3;
     }
 
     .system ::-moz-selection {
         background: #76767a;
-        color: #f3f3f3
+        color: #f3f3f3;
     }
+}
 
-    /*Box Style for Pixelfont*/
-    .pixel .box {
-        border-radius: 0px;
-    }
+/*Box Style for Pixelfont*/
+.pixel .box {
+    border-radius: 0px;
+}
 
-    .pixel #logo {
-        font-family: 'GalmuriMono7';
-    }
+.pixel #logo {
+    font-family: 'GalmuriMono7';
+}
 
-    .pixel #date {
-        font-family: 'Galmuri7';
-    }
+.pixel #date {
+    font-family: 'Galmuri7';
+}
 
 
-    /* fonts */
-    @font-face {
-        font-family: 'GowunDodum';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+/* fonts */
+@font-face {
+    font-family: 'GowunDodum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face {
-        font-family: 'GowunBatang';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'GowunBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face {
-        font-family: 'Pretendard';
-        src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face {
-        font-family: 'NanumBarunpen';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'NanumBarunpen';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face {
-        font-family: 'D2Coding';
-        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    @font-face {
-        font-family: 'NeoDunggeunmo';
-        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    .courier-prime-regular {
-        font-family: "Courier Prime", monospace;
-        font-weight: 400;
-        font-style: normal;
-    }
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
